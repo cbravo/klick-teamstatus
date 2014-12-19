@@ -1,0 +1,227 @@
+/*=============================================================================================== */
+/*    GENERAL =================================================================================== */
+/*=============================================================================================== */
+@brand: #137ba6;
+@brand-light: #31a7de;
+@brand-dark: #005c87;
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.section{
+	padding: 20px 0px;
+}
+.btn1{
+	background: none repeat scroll 0 0 @brand;
+	color: #ffffff;
+	padding: 4px 50px;
+	border-radius: 20px;
+	margin: 15px 0px;
+	font-size: 14px;
+	border: none;
+	&:hover{
+		background-color: @brand-dark;
+	}
+}
+h2{
+	color: @brand;
+	font-size: 22px;
+	span{
+		font-size: 10px;
+		color: #999;
+		display: inline-block;
+	}
+}
+h3{
+	font-size: 20px;
+}
+/*=============================================================================================== */
+/*   AJAX  ====================================================================================== */
+/*=============================================================================================== */
+.ajax-content{
+	display: none;
+}
+#loader{
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -16px;
+	margin-top: -16px;
+	background: url(../images/loader.gif) no-repeat center center; 
+}
+/*=============================================================================================== */
+/*    HEADER  =================================================================================== */
+/*=============================================================================================== */
+.header{
+	background: url(../images/background_h.gif) repeat-x 0px 0px;
+}
+/*=============================================================================================== */
+/*    NAVIGATION   ============================================================================== */
+/*=============================================================================================== */
+.right-logo{
+	padding: 0px 0px 0px 30px;
+}
+
+.navbar{
+	border: none;
+	a{
+		&:focus{
+			border: none;
+			outline: none;
+		}
+		
+	}
+}
+.navbar-default{
+	background: none;
+	.navbar-toggle{
+		background: @brand-light;
+		border: none;
+		.icon-bar{
+			background-color: #fff;
+		}
+		&:hover{
+			background-color: #fff;
+			.icon-bar{
+				background-color: @brand-light;
+			}
+		}
+		&:focus{
+			background: @brand-light;
+			.icon-bar{
+				background-color: #fff;
+			}
+		}
+	}
+	.navbar-collapse{
+		background: @brand;
+		border: none;
+		@media (min-width: 768px) {
+			background: none;
+		}
+	}
+
+	.navbar-nav{
+		li{
+			border-top: 1px solid @brand-light;
+			border-bottom: 1px solid @brand-dark;
+			&:first-child{
+				border-top: none;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+			@media (min-width: 768px) {
+				border:none;
+			}
+
+			a{
+				background-color: @brand;
+				color:#fff;
+				font-weight: bold;
+
+				&:hover,
+				&:focus,
+				&.selected{
+					background-color: #fff;
+					color: @brand;
+				}
+				@media (min-width: 768px) {
+					color: #fff;
+					font-weight: bold;
+					background: none;
+
+					&:hover,
+					&:focus,
+					&.selected{
+						color: @brand;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.navbar-brand{
+		padding-top: 0px;
+		padding-bottom: 0px;
+		&:focus{
+			border: none;
+			outline: none;
+		};
+	}
+}
+
+
+
+/*=============================================================================================== */
+/*    USER DISPLAY PLATE  ======================================================================= */
+/*=============================================================================================== */
+.user{
+	padding: 0px 10px;
+	.photo{
+		// float: left;
+		// padding-right: 20px;
+	}
+	ul{
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		li{
+			padding: 2px 0px;
+			strong{
+				padding-right: 2px;
+			}
+			&.name{
+				font-size: 18px;
+			}
+		}
+	}
+}
+/*=============================================================================================== */
+/*    USER LIST VIEW  =========================================================================== */
+/*=============================================================================================== */
+#user-list{
+	h3{
+		margin-top: 40px;
+		&:first-child{
+			margin-top: 20px;
+		}
+	}
+	.user{
+		cursor: pointer;
+		padding: 10px 10px;
+
+		&:hover,
+		&.selected{
+			background-color: #e8f4fb;
+		};
+
+		.name{
+			span{
+				font-size: 10px;
+				color: #999;
+				display: inline-block;
+			}
+		}
+		&.disabled{
+			opacity: 0.2;
+		}
+	}
+}
+#user{
+	.name{
+		span{
+			font-size: 10px;
+			color: #999;
+			display: inline-block;
+		}
+	}
+	.message{
+		padding: 15px 0px;
+	}
+}

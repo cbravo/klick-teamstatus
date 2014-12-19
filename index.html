@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Klick Team Status</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap minified CSS -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+	<script src='js/jquery-2.1.1.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+	<script src="js/klickteamstatus.js"></script>
+	<script>
+		$('document').ready(function(){
+			//edit default settings here ex.  
+			KlickTeamStatus.config.currentView = '#team-view';
+			KlickTeamStatus.init();
+		});
+	</script>
+</head>
+<body>
+	<div id="loader" style="display:none;"></div>
+
+	<div class="header">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navmenu">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/"><img src="images/klickheader.png" height="50" width="250" alt="Klick Health - Team Status" /></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navmenu">
+					<div class="navbar-right right-logo hidden-xs"><img src="images/toplogo.gif" height="50" width="36" alt="Klick Health" /></div>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a id="status-view-toggle" href="#" onclick="KlickTeamStatus.helpers.toggleView('#status-view', this); return false;">Set team</a></li>
+						<li><a id="team-view-toggle" href="#" onclick="KlickTeamStatus.helpers.toggleView('#team-view', this); return false;">Team status</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+	</div>
+	
+	<div id="global-alerts" style="display:none;" class="section">
+		<div class="container">
+			<div class="row">    
+				<div class="col-xs-12">
+					<div class="alert-container"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="status-view" style="display:none;" class="main-content section">
+		<div class="container">
+			<div class="row">    
+				<div class="col-xs-12 col-sm-8 col-md-7 col-lg-5">
+					<div id="status-alerts" style="display:none;" class="row">    
+						<div class="col-xs-12">
+							<div class="alert-container"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="currentuser" class="user" style="display:none;">
+								<h2>Your current status:</h2>
+								<form class="details-container" action=""></form>                      
+								<button class="btn1" onclick="KlickTeamStatus.firebase.updateUser(); return false;">Update Status</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="team-view" style="display:none;" class="main-content section">
+		<div class="container">
+			<div class="row">    
+				<div class="col-xs-12">
+					<h2>Current team status:</h2>
+					<!-- <h5>Click on a user to see contact details.</h5> -->
+					<div id="user-list">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  // ga('create', 'UA-54525565-1', 'auto');
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "firebase": "klickidle",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

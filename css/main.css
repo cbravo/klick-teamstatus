@@ -1,0 +1,202 @@
+/*=============================================================================================== */
+/*    GENERAL =================================================================================== */
+/*=============================================================================================== */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.section {
+  padding: 20px 0px;
+}
+.btn1 {
+  background: none repeat scroll 0 0 #137ba6;
+  color: #ffffff;
+  padding: 4px 50px;
+  border-radius: 20px;
+  margin: 15px 0px;
+  font-size: 14px;
+  border: none;
+}
+.btn1:hover {
+  background-color: #005c87;
+}
+h2 {
+  color: #137ba6;
+  font-size: 22px;
+}
+h2 span {
+  font-size: 10px;
+  color: #999;
+  display: inline-block;
+}
+h3 {
+  font-size: 20px;
+}
+/*=============================================================================================== */
+/*   AJAX  ====================================================================================== */
+/*=============================================================================================== */
+.ajax-content {
+  display: none;
+}
+#loader {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  background: url(../images/loader.gif) no-repeat center center;
+}
+/*=============================================================================================== */
+/*    HEADER  =================================================================================== */
+/*=============================================================================================== */
+.header {
+  background: url(../images/background_h.gif) repeat-x 0px 0px;
+}
+/*=============================================================================================== */
+/*    NAVIGATION   ============================================================================== */
+/*=============================================================================================== */
+.right-logo {
+  padding: 0px 0px 0px 30px;
+}
+.navbar {
+  border: none;
+}
+.navbar a:focus {
+  border: none;
+  outline: none;
+}
+.navbar-default {
+  background: none;
+}
+.navbar-default .navbar-toggle {
+  background: #31a7de;
+  border: none;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #31a7de;
+}
+.navbar-default .navbar-toggle:focus {
+  background: #31a7de;
+}
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .navbar-collapse {
+  background: #137ba6;
+  border: none;
+}
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse {
+    background: none;
+  }
+}
+.navbar-default .navbar-nav li {
+  border-top: 1px solid #31a7de;
+  border-bottom: 1px solid #005c87;
+}
+.navbar-default .navbar-nav li:first-child {
+  border-top: none;
+}
+.navbar-default .navbar-nav li:last-child {
+  border-bottom: none;
+}
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav li {
+    border: none;
+  }
+}
+.navbar-default .navbar-nav li a {
+  background-color: #137ba6;
+  color: #fff;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li a:focus,
+.navbar-default .navbar-nav li a.selected {
+  background-color: #fff;
+  color: #137ba6;
+}
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav li a {
+    color: #fff;
+    font-weight: bold;
+    background: none;
+  }
+  .navbar-default .navbar-nav li a:hover,
+  .navbar-default .navbar-nav li a:focus,
+  .navbar-default .navbar-nav li a.selected {
+    color: #137ba6;
+    background-color: #fff;
+  }
+}
+.navbar-default .navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.navbar-default .navbar-brand:focus {
+  border: none;
+  outline: none;
+}
+/*=============================================================================================== */
+/*    USER DISPLAY PLATE  ======================================================================= */
+/*=============================================================================================== */
+.user {
+  padding: 0px 10px;
+}
+.user ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.user ul li {
+  padding: 2px 0px;
+}
+.user ul li strong {
+  padding-right: 2px;
+}
+.user ul li.name {
+  font-size: 18px;
+}
+/*=============================================================================================== */
+/*    USER LIST VIEW  =========================================================================== */
+/*=============================================================================================== */
+#user-list h3 {
+  margin-top: 40px;
+}
+#user-list h3:first-child {
+  margin-top: 20px;
+}
+#user-list .user {
+  cursor: pointer;
+  padding: 10px 10px;
+}
+#user-list .user:hover,
+#user-list .user.selected {
+  background-color: #e8f4fb;
+}
+#user-list .user .name span {
+  font-size: 10px;
+  color: #999;
+  display: inline-block;
+}
+#user-list .user.disabled {
+  opacity: 0.2;
+}
+#user .name span {
+  font-size: 10px;
+  color: #999;
+  display: inline-block;
+}
+#user .message {
+  padding: 15px 0px;
+}
