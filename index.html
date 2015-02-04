@@ -15,7 +15,7 @@
 	<script>
 		$('document').ready(function(){
 			//edit default settings here ex.  
-			KlickTeamStatus.config.currentView = '#team-view';
+			KlickTeamStatus.config.currentView = '#options-view';
 			KlickTeamStatus.init();
 		});
 	</script>
@@ -40,8 +40,8 @@
 				<div class="collapse navbar-collapse" id="navmenu">
 					<div class="navbar-right right-logo hidden-xs"><img src="images/toplogo.gif" height="50" width="36" alt="Klick Health" /></div>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a id="status-view-toggle" href="#" onclick="KlickTeamStatus.helpers.toggleView('#status-view', this); return false;">Set team</a></li>
 						<li><a id="team-view-toggle" href="#" onclick="KlickTeamStatus.helpers.toggleView('#team-view', this); return false;">Team status</a></li>
+						<li><a id="options-view-toggle" href="#" onclick="KlickTeamStatus.helpers.toggleView('#options-view', this); return false;"><span class="icon-cog"></span></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
@@ -59,21 +59,24 @@
 	</div>
 
 
-	<div id="status-view" style="display:none;" class="main-content section">
+	<div id="options-view" style="display:none;" class="main-content section">
 		<div class="container">
 			<div class="row">    
 				<div class="col-xs-12 col-sm-8 col-md-7 col-lg-5">
-					<div id="status-alerts" style="display:none;" class="row">    
+					<div id="option-alerts" style="display:none;" class="row">    
 						<div class="col-xs-12">
 							<div class="alert-container"></div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<div id="currentuser" class="user" style="display:none;">
-								<h2>Your current status:</h2>
-								<form class="details-container" action=""></form>                      
-								<button class="btn1" onclick="KlickTeamStatus.firebase.updateUser(); return false;">Update Status</button>
+							<div id="options">
+								<h2>Team IDs</h2>
+								<p>Please input the Genome IDs of the users you would like to have on your status list. (comma separated)</p>
+								<form class="details-container" action="">
+									<textarea name="teamlist" id="teamlist"></textarea>
+									<button class="btn1" onclick="KlickTeamStatus.saveUsers(); return false;">Update Team</button>
+								</form>                      
 							</div>
 						</div>
 					</div>
