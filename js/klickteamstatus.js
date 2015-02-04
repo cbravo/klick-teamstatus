@@ -29,7 +29,7 @@ var KlickTeamStatus =  (function(app){
 			app.helpers.startAjaxLoad();
 			var call = app.helpers.requestJSON(app.config.genomeUrl+'/api/User/Current.json');
 			call.error(function(data){
-				app.helpers.createAlert('#global-alerts', 'error', '<strong>Failed to make contact with Genome.</strong> Log into Genome before using Klick Idle!');
+				app.helpers.createAlert('#global-alerts', 'error', '<strong>Failed to make contact with Genome.</strong> Log into Genome before using Klick Team Status!');
 				$('.main-content').hide();
 			})
 			call.success(function(data){
@@ -52,7 +52,7 @@ var KlickTeamStatus =  (function(app){
 		getUserTeam : function(user){
 			var call = app.helpers.requestJSON(app.config.genomeUrl+'/api/User.json?SupervisorID=4347');
 			call.error(function(data){
-				app.helpers.createAlert('#global-alerts', 'error', '<strong>Failed to make contact with Genome.</strong> Log into Genome before using Klick Idle!');
+				app.helpers.createAlert('#global-alerts', 'error', '<strong>Failed to make contact with Genome.</strong> Log into Genome before using Klick Team Status!');
 			})
 			call.success(function(data){
 				app.displayUsers(data.Entries);
